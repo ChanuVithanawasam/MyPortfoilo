@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case1</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet"  href="normalize.css">
+    <style>
+        body>main{
+            width: 100%;
+            height: 200vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        body>main>section:first-child{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 0;
+
+        }
+        body>main>section:last-child{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+
+        }
+        body>main>section>section:first-child{
+            width: 50%;
+            height: 50%;
+            background-color: red;
+            display:inline-block;
+            position: absolute;
+            left: 0;
+            top:0;
+        }
+        body>main>section>section:nth-child(2){
+            width: 50%;
+            height: 50%;
+            background-color: darkgreen;
+            display:inline-block;
+            position: absolute;
+            right: 0;
+            top:0;
+        }
+        body>main>section>section:nth-child(3){
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+            display:inline-block;
+            position: absolute;
+            left: 0;
+            bottom:0;
+        }
+        body>main>section>section:nth-child(4){
+            width: 50%;
+            height: 50%;
+            background-color: deeppink;
+            display:inline-block;
+            position: absolute;
+            right: 0;
+            bottom:0;
+        }
+        body>main>section>section:nth-child(5){
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            display: inline-block;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 1px solid white;
+            background: white;
+
+        }
+        body>main>section>section:nth-child(5)>div{
+            width: 60%;
+            height: 60%;
+            border-radius: 100%;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom:0;
+            top: 0;
+            margin: auto;
+        }
+        body>main>section>section>section:first-child{
+            width: 30%;
+            height: 60%;
+            border-radius: 100%;
+            background-color: white;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom:0;
+            top: 0;
+            margin: auto;
+
+        }
+        body>main>section>section>section:first-child>div{
+            width: 50%;
+            height: 50%;
+            background-color: red;
+            display:inline-block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom:0;
+            top: 0;
+            margin: auto;
+        }
+
+        body>main>section>section:first-child>section:nth-child(2){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-bottom-right-radius:100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        body>main>section>section:first-child>section:nth-child(3){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-bottom-left-radius:100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        body>main>section>section:nth-child(2)>section:nth-child(2){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-bottom-right-radius:100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        body>main>section>section:nth-child(2)>section:nth-child(3){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-bottom-left-radius:100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        body>main>section>section:nth-child(3)>section:nth-child(2){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-top-right-radius:100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+        }
+        body>main>section>section:nth-child(3)>section:nth-child(3){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-top-left-radius:100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        body>main>section>section:nth-child(4)>section:nth-child(2){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-top-right-radius:100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+        }
+        body>main>section>section:nth-child(4)>section:nth-child(3){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            border-top-left-radius:100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <div></div>
+        </section>
+    </section>
+    <section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <section>
+                <div></div>
+            </section>
+            <section></section>
+            <section></section>
+        </section>
+        <section>
+            <div></div>
+        </section>
+    </section>
+</main>
+</body>
+</html>
