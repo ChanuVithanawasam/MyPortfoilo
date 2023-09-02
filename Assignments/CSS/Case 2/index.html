@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/font-awsome/css/all.css">
+
     <style>
 
         * {
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
 
         header{
@@ -43,7 +46,7 @@
             padding: 10px;
             font-family: 'Poppins', sans-serif;
             color: rgba(46, 41, 41, 0.96);
-            font-size: 19px;
+            font-size: 16px;
             border-right: 2px solid rgba(46, 41, 41, 0.58);
         }
         header > nav > ul > li:first-child{
@@ -113,34 +116,43 @@
         }
 
         main > section > section:first-child {
-            height: 300px;
             position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            font-size: 0;
+            border: 1px solid black;
         }
 
-        main>section>section:first-child>div{
-            height: 100%;
+        main>section>section>div{
             width: calc(100% / 3);
-            position: absolute;
-            border: 1px solid rgba(0, 0, 0, 0.97);
+            height: 100%;
+            display: inline-block;
+            border: 1px solid black;
+            box-sizing: border-box;
+
         }
 
         main>section>section>div:nth-child(1){
-            left: 0;
             background: url("../../../assets/Assignments/monkey.gif");
-
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
 
         }
 
         main>section>section>div:nth-child(2){
-            left:calc(100% /3);
-            background: url("../../../assets/Assignments/monkey.gif") ;
-
+            background: url("../../../assets/Assignments/singing\ monkey.gif") ;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         main>section>section>div:nth-child(3){
-           right: 0;
-            background: url("../../../assets/Assignments/monkey.gif");
-
+          background: url("../../../assets/Assignments/5922a2_2b1dfa61c08d47c1817c55b53a6dccf8~mv2.gif");
+          background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
 
@@ -165,10 +177,10 @@
 
     <nav>
         <ul>
-        <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
-        <li><i class="fa-solid fa-earth-africa"></i><a href="#">Service</a></li>
-        <li><i class="fa-solid fa-phone"></i><a href="#">Contacts</a></li>
-        <li><i class="fa-solid fa-file-invoice"></i><a href="#">About Us</a></li>
+            <li><a href="#a"><i class="fa-solid fa-house"></i>  Home</a></li>
+            <li><a href="#a"><i class="fa-solid fa-earth-americas"></i>  Service</a></li>
+            <li><a href="#a"><i class="fa-solid fa-address-book"></i>  Contact Us</a></li>
+            <li><a href="#a"><i class="fa-solid fa-address-card"></i>  About Us</a></li>
         </ul>
     </nav>
 
@@ -176,10 +188,10 @@
 <main>
     <nav>
         <ul>
-            <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
-            <li><i class="fa-solid fa-earth-africa"></i><a href="#">Service</a></li>
-            <li><i class="fa-solid fa-phone"></i><a href="#">Contact</a></li>
-            <li><i class="fa-solid fa-file-invoice"></i><a href="#">About Us</a></li>
+            <li><a href="#a"><i class="fa-solid fa-house"></i>  Home</a></li>
+            <li><a href="#a"><i class="fa-solid fa-earth-americas"></i>  Service</a></li>
+            <li><a href="#a"><i class="fa-solid fa-address-book"></i>  Contact Us</a></li>
+            <li><a href="#a"><i class="fa-solid fa-address-card"></i>  About Us</a></li>
         </ul>
     </nav>
     <section>
