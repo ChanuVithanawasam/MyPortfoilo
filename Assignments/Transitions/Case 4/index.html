@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_4</title>
+  <style>
+    body>section>div{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      border: 10px solid grey;
+      border-top: 10px solid red;
+      transform: rotate(0deg);
+
+    }
+
+    body>section>div:hover{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        border: 10px solid grey;
+        border-top: 10px solid red;
+        transform: rotate(360deg);
+        transition: 2s;
+
+    }
+
+    body>section>div>div:nth-child(1){
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: red;
+      position: relative;
+      left: 250px;
+      top: 30px;
+    }
+    body>section>div>div:nth-child(2){
+        position: relative;
+        top: 60px;
+        left: 130px;
+      width: 150px;
+      height: 10px;
+      background-color: red;
+        transform: rotate(-39deg);
+
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div>
+    <div>
+
+    </div>
+
+    <div>
+
+    </div>
+  </div>
+</section>
+</body>
+</html>
