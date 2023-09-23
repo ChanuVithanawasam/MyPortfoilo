@@ -10,7 +10,7 @@
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid mollitia suscipit tenetur.">
     <meta name="Owner" content="ChAnu Vithanawasam">
     <meta name="authur" content="ChAnu Vithanawasam">
-    <meta name="theme-color" content="Blue">
+    <meta name="theme-color" content="Green">
     <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>ChAnu</title>
 
@@ -32,7 +32,7 @@
         }
 
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 7px;
         }
 
         ::-webkit-scrollbar-thumb {
@@ -120,28 +120,36 @@
         }
 
         .home-img img {
+            position: absolute;
+            top: 0;
+            right: 0;
             width: 35vw;
-            animation: floatImage 6s ease-in-out infinite;
+            animation: floatImage 6s ease-in-out infinite; 
         }
 
         @keyframes floatImage {
             0% {
-                transform: translateY(0);
+                transform: translateX(0);
             }
             50% {
-                transform: translateY(-2.4rem);
+                transform: translateY(5%) ;
             }
             100% {
-                transform: translateY(0);
+                transform: translateX(0);
             }
         }
 
         .home-content h3 {
+            text-align: right;
+            padding: 20px;
             font-size: 5rem;
             font-weight: 700;
         }
 
         .home-content h1 {
+            text-align: left !important;
+            margin-left: 0 !important;
+            padding-left: 0 !important;
             font-size: 4.5rem;
             font-weight: 700;
             line-height: 1.3;
@@ -156,6 +164,9 @@
         }
 
         .home-content p {
+            text-align: left !important;
+            margin: 0 !important;
+            padding: 0 !important;
             font-size: 2rem;
         }
 
@@ -608,7 +619,6 @@
         <!-- home section -->
 
         <section class="home" id="home">
-          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
             <div class="home-content">
                 <h1 class="heading">Hi,I'm <span>ChAnu Vithanawasam</span></h1>
                 <P>Full Stack Software & Web Developer from Sri Lanka 🇱🇰</P>
@@ -851,11 +861,6 @@
     
 
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    
-    <script src="script.js"></script>
-
 </body>
 
 </html>

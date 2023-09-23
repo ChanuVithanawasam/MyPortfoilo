@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations Case 01</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="normalize.css" rel="stylesheet">
+    <style>
+        div{
+            width: 150px;
+            height: 70px;
+            border-radius: 15px;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes my-animation {
+            0%{
+                transform: rotate(0deg);
+                background: yellow;
+                margin: 0px 0px 0px 0px;/*top,right,bottom,left*/
+            }
+            25%{
+                transform: rotate(360deg);
+                background: blue;
+                margin:0px 0px 0px 1200px;
+            }
+            50%{
+                background: orangered;
+                margin:500px 0px 0px 1200px;
+            }
+            75%{
+                background: red;
+                margin:500px 0px 0px 0px;
+            }
+            100%{
+                background: deeppink;
+                margin:0px 0px 0px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
