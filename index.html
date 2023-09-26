@@ -467,8 +467,81 @@
         .technologies h2{
             text-align: left !important;
             margin-top: 0;
-            line-height: 0;
+            line-height: 4;
             font-size: 3rem;
+        }
+        .technologies-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .technologies-container .technologies-box {
+            position: relative;
+            border-radius: 1rem; 
+            box-shadow: 0 0 0.5rem var(--bg-color); 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column; 
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .technologies-box img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover; 
+            transition: 0.5s ease;
+        }
+
+        .technologies-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .technologies-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
+
+        .technologies-box:hover .technologies-layer {
+            transform: translateY(0);
+        }
+
+        .technologies-layer h4 {
+            font-size: 3rem; 
+        }
+
+        .technologies-layer p {
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        .technologies-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem; 
+            height: 3rem; 
+            background: var(--text-color);
+            border-radius: 50%;
+        }
+
+        .technologies-layer a i {
+            font-size: 2rem; 
+            color: var(--second-bg-color);
         }
         .projects {
             background: var(--second-bg-color);
@@ -477,7 +550,7 @@
         .projects h2 {
             text-align: left !important;
             margin-top: 0;
-            line-height: 0;
+            line-height: 4;
             font-size: 3rem;
         }
 
@@ -515,11 +588,16 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
-            padding: 1rem; 
+            padding: 0 4rem;
             transform: translateY(100%);
-            transition: 0.5s ease;
+            transition: .5s ease;
         }
 
         .projects-box:hover .projects-layer {
@@ -527,7 +605,7 @@
         }
 
         .projects-layer h4 {
-            font-size: 1.5rem; 
+            font-size: 3rem; 
         }
 
         .projects-layer p {
@@ -873,24 +951,24 @@
 
             <span>Behind the solution,</span>
 
-            <div class="projects-container">
-                <div class="projects-box">
+            <div class="ourMethods-container">
+                <div class="ourMethods-box">
                     <img src="assets/49236requirement_gathering.jpg" alt="">
-                    <div class="projects-layer">
+                    <div class="ourMethods-layer">
                         <h4>Requirement Gathering</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="ourMethods-box">
                     <img src="assets/UX-UI-Design.jpg" alt="">
-                    <div class="projects-layer">
+                    <div class="ourMethods-layer">
                         <h4>UX/UI Design</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="ourMethods-box">
                     <img src="assets/hr-case-management-cover.webp" alt="">
-                    <div class="projects-layer">
+                    <div class="ourMethods-layer">
                         <h4>Development & Maintenance</h4>
                     </div>
                 </div>
@@ -928,45 +1006,45 @@
          <section class="technologies" id="technologies">
             <h2 class="heading">Technologies</h2>
 
-            <div class="projects-container">
-                <div class="projects-box">
+            <div class="technologies-container">
+                <div class="technologies-box">
                     <img src="assets/pngwing.com.png" alt="">
-                    <div class="projects-layer">
+                    <div class="technologies-layer">
                         <h4>Java</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="technologies-box">
                     <img src="assets/pngwing.com (1).png" alt="">
-                    <div class="projects-layer">
+                    <div class="technologies-layer">
                         <h4>MySql</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="technologies-box">
                     <img src="assets/pngwing.com (2).png" alt="">
-                    <div class="projects-layer">
+                    <div class="technologies-layer">
                         <h4>Html</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="technologies-box">
                     <img src="assets/pngwing.com (4).png" alt="">
-                    <div class="projects-layer">
+                    <div class="technologies-layer">
                         <h4>Python</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="technologies-box">
                     <img src="assets/pngwing.com (3).png" alt="">
-                    <div class="projects-layer">
+                    <div class="technologies-layer">
                         <h4>React</h4>
                     </div>
                 </div>
 
-                <div class="projects-box">
+                <div class="technologies-box">
                     <img src="assets/pngwing.com (5).png" alt="">
-                    <div class="projects-layer">
+                    <div class="technologies-layer">
                         <h4>Raspbian</h4>
                     </div>
                 </div>
@@ -1045,6 +1123,18 @@
                 </div>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
                 <input type="submit" value="Send Message" class="btn">
+                <div class="social-media">
+                    <a target="_blank" href="https://github.com/ChanuVithanawasam"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.instagram.com/chanu_vithanawasam/"><i
+                            class='bx bxl-instagram'></i></a>
+                    <a target="_blank" href="https://web.facebook.com/chanu.vithanawasam"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a target="_blank" href="mailto:chanumadhuprasanna99@gmail.com"><i
+                            class='bx bxl-gmail'></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/chanu-vithanawasam-1b926627b/"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a target="_blank" href="https://twitter.com/ChAnuMVN"><i class='bx bxl-twitter'></i></a>
+                </div>
             </form>
         </section>
 
