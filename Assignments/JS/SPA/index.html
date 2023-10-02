@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--link Bootstrap Framework-->
+    <link href="assets/styles/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    .navbar-brand{
+        font-weight: 700;
+        font-size: 30px;
+        color: #FFFFFF;
+    }
+    .nav-link{
+        color: white;
+
+    }
+    .active{
+        color: darkblue;
+    }
+    body{
+        background: #EAF9F4;
+    }
+    body>div>img{
+        z-index: 1;
+        width: 60%;
+    }
+    h1{
+        text-align: center;
+        margin: 40px;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .card{
+        background-color: transparent;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+    .card-body{
+        background-color: white;
+    }
+    .card-pic{
+        background: rgba(255, 255, 255, 0.7);
+
+    }
+    .content-img {
+        width: 100px;
+        height: auto;
+    }
+    .content h4{
+        color: rgb(38, 151, 44) !important;
+    }
+
+
+    body>section>div{
+        z-index: 2;
+    }
+</style>
+
+<body>
+
+<header>
+    <!--Nav started-->
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand text-dark fw-bold " href="#">
+                <img alt="Logo" class="d-inline-block align-text-center" height="44" src="assets/images/ppC.png"
+                     width="50">
+                <span class="text-success"> ChAnu </span> POS System
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--Nav ended-->
+</header>
+<body>
+<div class="container-fluid text-center position-absolute top-50 start-50 translate-middle">
+    <!-- Content here -->
+    <img src="assets/images/homebackground.png"  alt="background img">
+</div>
+<section class="row container-fluid">
+    <div class="col-12">
+        <h1>Welcome !</h1>
+    </div>
+    <div class="d-flex justify-content-evenly col-12 text-center">
+        <div class="card " style="width: 18rem;">
+            <div class="card-pic">
+                <img src="assets/images/user%201.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h6>Manage</h6>
+                <h5 class="card-title">Customers</h5>
+                <p class="card-text">Add,Update,Delete,View Customers</p>
+                <a href="../../CSS_Framework/POS/customer.html" class="btn btn-primary">View More ></a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;" >
+            <div class="card-pic">
+                <img  src="assets/images/box.png" class="card-img-top" alt="...">
+            </div>
+
+            <div class="card-body">
+                <h6>Manage</h6>
+                <h5 class="card-title">Items</h5>
+                <p class="card-text">Add,Update,Delete,View Items</p>
+                <a href="../../CSS_Framework/POS/item.html" class="btn btn-primary">View More ></a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-pic">
+                <img  src="assets/images/placeOrder.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h6>Manage</h6>
+                <h5 class="card-title">Order</h5>
+                <p class="card-text">Add,Update,Delete,View Place</p>
+                <a href="../../CSS_Framework/POS/orders.html" class="btn btn-primary">View More ></a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container text-center">
+    <div class="row gap-2 p-2">
+        <div class="col">
+            <div class="p-3 content">
+                <img class="content-img" src="assets/images/profit.png">
+                <h3 class="div-title fw-semibold">Total Income</h3>
+                <h4 class="fw-bold content-text">67,800LKR</h4>
+                <div class="border-bottom border-2 p-1"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 content">
+                <img class="content-img" src="assets/images/orders.png">
+                <h3 class="div-title fw-semibold">Total Orders</h3>
+                <h4 class="fw-bold content-text">16700</h4>
+                <div class="border-bottom border-2 p-1"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 content">
+                <img class="content-img" src="assets/images/tag.png">
+                <h3 class="div-title fw-semibold">Total Discounts</h3>
+                <h4 class="fw-bold content-text">13,500LKR</h4>
+                <div class="border-bottom border-2 p-1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row gap-2 p-2">
+        <div class="col col">
+            <div class="p-3 content">
+                <img class="content-img" src="assets/images/employees.png">
+                <h3 class="div-title fw-semibold">Total Employees</h3>
+                <h4 class="fw-bold content-text">480</h4>
+                <div class="border-bottom border-2 p-1"></div>
+            </div>
+        </div>
+        <div class="col col">
+            <div class="p-3 content">
+                <img class="content-img" src="assets/images/item.png">
+                <h3 class="div-title fw-semibold">Total Items</h3>
+                <h4 class="fw-bold content-text">2,45000</h4>
+                <div class="border-bottom border-2 p-1"></div>
+            </div>
+        </div>
+        <div class="col col">
+            <div class="p-3 content">
+                <img class="content-img" src="assets/images/employees.png">
+                <h3 class="div-title fw-semibold">New Customers</h3>
+                <h4 class="fw-bold content-text">310</h4>
+                <div class="border-bottom border-2 p-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Import js for bootstrap-->
+<script src="assets/styles/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
