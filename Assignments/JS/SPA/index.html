@@ -2,68 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>POS System</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!--link Bootstrap Framework-->
     <link href="assets/styles/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/fonts/css/all.min.css" rel="stylesheet">
+
 </head>
 <style>
-    .navbar-brand{
-        font-weight: 700;
-        font-size: 30px;
-        color: #FFFFFF;
-    }
-    .nav-link{
-        color: white;
+  .navbar-brand{
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  .nav-link{
+    color: white;
 
-    }
-    .active{
-        color: darkblue;
-    }
-    body{
-        background: #EAF9F4;
-    }
-    body>div>img{
-        z-index: 1;
-        width: 60%;
-    }
-    h1{
-        text-align: center;
-        margin: 40px;
-        font-size: 50px;
-        font-weight: bold;
-    }
-    .card{
-        background-color: transparent;
-        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-    }
-    .card-body{
-        background-color: white;
-    }
-    .card-pic{
-        background: rgba(255, 255, 255, 0.7);
+  }
+  .active{
+    color: darkblue;
+  }
+  body{
+    background: #EAF9F4;
+  }
+  /*home section styles*/
+  body>main:nth-child(2)>div>img{
+    z-index: 1;
+    width: 60%;
+  }
+  body>main:nth-child(2)>section>div>h1{
+    text-align: center;
+    margin: 40px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .card{
+    background-color: transparent;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  }
+  .card-body{
+    background-color: white;
+  }
+  .card-pic{
+    background: rgba(255, 255, 255, 0.7);
 
-    }
-    .content-img {
+  }
+
+  body>main:nth-child(2)>section>div{
+    z-index: 2;
+
+  }
+  .content-img {
         width: 100px;
         height: auto;
     }
     .content h4{
         color: rgb(38, 151, 44) !important;
     }
+  /*home Section style End*/
+  /*customer section styles*/
 
+  body>main:nth-child(3)>div:first-child>h2,body>main:nth-child(4)>div:first-child>h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  body>main:nth-child(3)>div:first-child>h5,body>main:nth-child(4)>div:first-child>h5{
+    font-weight: bold;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 10px;
+    background: rgba(79, 187, 210, 0.7);
+    border: 1px solid #000000;
+    border-radius: 10px;
+  }
+  .form-select{
+    width: 100px;
+  }
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(2),body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(2) {
+    gap: 10px;
+  }
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(2),body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(2) {
+    gap: 10px;
+  }
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(1),body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(1) {
+    background: #D84B5C;
+    border-radius: 5px;
+  }
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2), body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2) {
+    background: #E9A838;
+    border-radius: 5px;
+  }
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(3),body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(3) {
+    background: #0DB46F;
+    border-radius: 5px;
+  }
+  body>main:nth-child(3)>div:nth-child(2)>button:nth-child(1),body>main:nth-child(4)>div:nth-child(2)>button:nth-child(1) {
+    margin-top: 60px;
+    background: #0A7289;
+    border-radius: 5px;
+  }
+  body>main:nth-child(3)>div:nth-child(2)>button:last-child,body>main:nth-child(4)>div:nth-child(2)>button:last-child {
+    margin-bottom: 20px;
+    background: #0D865D;
+    border-radius: 5px;
+  }
+  #customerTable,#tableItems{
+    margin-top: 40px;
+  }
 
-    body>section>div{
-        z-index: 2;
-    }
+  /*/*place Order Style*/
+
+  body>main:nth-child(5)>div:first-child>h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  body>main:nth-child(5)>div:nth-child(2)>h5,body>main>div:nth-child(3)>h5,body>main>div:nth-child(4)>h5 {
+    font-weight: bold;
+    padding: 8px;
+    background: rgba(79, 187, 210, 0.7);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  .total{
+    color: #B72B2B;
+  }
+  .balance{
+    color: #0D865D;
+  }
+  #addToCart{
+
+    background: #2980B9;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    width: 50%;
+  }
+  #placeOrder{
+    background: #E9A838;
+    border-radius: 10px;
+    border:0;
+    color: white;
+    width: 60%;
+    font-weight: bold;
+  }
+  #tablePlaceOrder{
+    margin-top: 40px;
+  }
+  /*orderdetail*/
+  body>main:nth-child(6)>div:nth-child(1)>h2, body>main:nth-child(6)>div:nth-child(3)>h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
 </style>
 
 <body>
 
 <header>
-    <!--Nav started-->
-    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom">
+    <!--Home Nav started-->
+      <nav id="navHome" class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom" style="background-color: #0DB46F;">
         <div class="container-fluid">
             <a class="navbar-brand text-dark fw-bold " href="#">
                 <img alt="Logo" class="d-inline-block align-text-center" height="44" src="assets/images/ppC.png"
@@ -77,55 +177,179 @@
             </button>
         </div>
     </nav>
-    <!--Nav ended-->
+    <!-- Home Nav ended-->
+
+<!--Customer Nav started-->
+  <nav id="navCustomer" class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom" style="background-color: #0DB46F;">
+    <div class="container-fluid">
+        <a class="navbar-brand text-dark fw-bold " href="#">
+            <img alt="Logo" class="d-inline-block align-text-center" height="44" src="assets/images/ppC.png"
+                 width="50">
+            <span class="text-success"> ChAnu </span> POS System
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link Home" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item Customers">
+                  <a class="nav-link active" href="#">Customers</a>
+                </li>
+                <li class="nav-item Items">
+                  <a class="nav-link " href="#">Items</a>
+                </li>
+                <li class="nav-item Order">
+                  <a class="nav-link" href="#">Order</a>
+                </li>
+              </ul>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary btn-m" type="button"><i class="fa-solid fa-user-plus"></i>
+                    Sign Up
+                </button>
+                <button class="btn btn-outline-secondary" type="button"><i
+                        class="fa-solid fa-right-from-bracket"></i> Log Out
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--Customer Nav ended-->
+
+<!--Item Nav started-->
+<nav id="navItem" class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom" style="background-color: #0DB46F;">
+    <div class="container-fluid">
+        <a class="navbar-brand text-dark fw-bold " href="#">
+            <img alt="Logo" class="d-inline-block align-text-center" height="44" src="assets/images/ppC.png"
+                 width="50">
+            <span class="text-success"> ChAnu </span> POS System
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link Home" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item Customers">
+                  <a class="nav-link " href="#">Customers</a>
+                </li>
+                <li class="nav-item Items">
+                  <a class="nav-link active" href="#">Items</a>
+                </li>
+                <li class="nav-item Order">
+                  <a class="nav-link" href="#">Order</a>
+                </li>
+              </ul>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary btn-m" type="button"><i class="fa-solid fa-user-plus"></i>
+                    Sign Up
+                </button>
+                <button class="btn btn-outline-secondary" type="button"><i
+                        class="fa-solid fa-right-from-bracket"></i> Log Out
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--Item Nav ended-->
+
+<!--Order Nav started-->
+<nav id="navOrder" class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative rounded-bottom" style="background-color: #0DB46F;">
+    <div class="container-fluid">
+        <a class="navbar-brand text-dark fw-bold " href="#">
+            <img alt="Logo" class="d-inline-block align-text-center" height="44" src="assets/images/ppC.png"
+                 width="50">
+            <span class="text-success"> ChAnu </span> POS System
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link Home" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item Customers">
+                  <a class="nav-link " href="#">Customers</a>
+                </li>
+                <li class="nav-item Items">
+                  <a class="nav-link " href="#">Items</a>
+                </li>
+                <li class="nav-item PlaceOrder">
+                  <a class="nav-link active" href="#">Order</a>
+                </li>
+              </ul>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary btn-m" type="button"><i class="fa-solid fa-user-plus"></i>
+                    Sign Up
+                </button>
+                <button class="btn btn-outline-secondary" type="button"><i
+                        class="fa-solid fa-right-from-bracket"></i> Log Out
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--Order Nav ended-->
 </header>
-<body>
-<div class="container-fluid text-center position-absolute top-50 start-50 translate-middle">
+<!--Start OF Home -->
+<main id="HomeSection">
+  <div class="container-fluid text-center position-absolute top-50 start-50 translate-middle">
     <!-- Content here -->
     <img src="assets/images/homebackground.png"  alt="background img">
-</div>
-<section class="row container-fluid">
+  </div>
+  <section class="row container-fluid">
     <div class="col-12">
-        <h1>Welcome !</h1>
+      <h1>Welcome !</h1>
     </div>
     <div class="d-flex justify-content-evenly col-12 text-center">
-        <div class="card " style="width: 18rem;">
-            <div class="card-pic">
-                <img src="assets/images/user%201.png" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-                <h6>Manage</h6>
-                <h5 class="card-title">Customers</h5>
-                <p class="card-text">Add,Update,Delete,View Customers</p>
-                <a href="../../CSS_Framework/POS/customer.html" class="btn btn-primary">View More ></a>
-            </div>
+      <div class="card " style="width: 18rem;">
+        <div class="card-pic">
+          <img src="assets/images/user%201.png" class="card-img-top" alt="...">
         </div>
-        <div class="card" style="width: 18rem;" >
-            <div class="card-pic">
-                <img  src="assets/images/box.png" class="card-img-top" alt="...">
-            </div>
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Customers</h5>
+          <p class="card-text">Add,Update,Delete,View Customers</p>
+          <button href="" class="btn btn-primary" id="btnCustomerViewMore">View More ></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" >
+        <div class="card-pic">
+          <img  src="assets/images/box.png" class="card-img-top" alt="...">
+        </div>
 
-            <div class="card-body">
-                <h6>Manage</h6>
-                <h5 class="card-title">Items</h5>
-                <p class="card-text">Add,Update,Delete,View Items</p>
-                <a href="../../CSS_Framework/POS/item.html" class="btn btn-primary">View More ></a>
-            </div>
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Items</h5>
+          <p class="card-text">Add,Update,Delete,View Items</p>
+          <button href="" class="btn btn-primary" id="btnItemsViewMore">View More ></button>
         </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-pic">
-                <img  src="assets/images/placeOrder.png" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-                <h6>Manage</h6>
-                <h5 class="card-title">Order</h5>
-                <p class="card-text">Add,Update,Delete,View Place</p>
-                <a href="../../CSS_Framework/POS/orders.html" class="btn btn-primary">View More ></a>
-            </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-pic">
+          <img  src="assets/images/placeOrder.png" class="card-img-top" alt="...">
         </div>
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Order</h5>
+          <p class="card-text">Add,Update,Delete,View Place</p>
+          <button href="" class="btn btn-primary" id="btnOrderViewMore">View More ></button>
+        </div>
+      </div>
     </div>
-</section>
-<div class="container text-center">
+  </section>
+  <div class="container text-center">
     <div class="row gap-2 p-2">
         <div class="col">
             <div class="p-3 content">
@@ -179,8 +403,724 @@
         </div>
     </div>
 </div>
+</main>
+<!--END OF HOME-->
 
-<!--Import js for bootstrap-->
-<script src="assets/styles/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+<!--Start OF Customers-->
+<main id="CustomerSection" class="row container-fluid">
+   <!-- Customer Header Start -->
+   <div class="container d-flex flex-grow-1 flex-column">
+    <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+        <h2 id="H1-1" style="font-family: 'Arial Rounded MT Bold',serif"><i class="fa-solid fa-users"></i> Customer
+        </h2>
+    </div>
+</div>
+<!-- Customer Header End -->
+
+<!-- Customer Header Section Start -->
+<div class="container d-flex flex-grow-1 flex-column" style="background-color: #cdd4db">
+    <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+        <h6 id="H6-1">Home > Customer</h6>
+        <hr>
+    </div>
+    <!-- Customer Header Section End -->
+
+    <!-- Customer Details Section Start -->
+    <div class="row justify-content-around" style="height: max-content">
+
+        <!-- Customer Details Search Section Start -->
+        <div class="col-10 col-md-5 col-lg-4 p-0 mt-2 rounded-3" style="background-color: #cdd4db">
+            <h4 class="text-center p-2 text-light rounded-3" style="background: #2d702d">Search Customer</h4>
+
+                <div class="mb-3 ms-3 me-3 ">
+                    <input class="form-control me-2" id="searchCusId"
+                           placeholder="Enter Customer ID"
+                           type="search">
+                </div>
+            <form>
+                <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3 btn-success" type="button" id="btnSearchCus" >Search</button>
+                <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" type="button" id="clearSearchCus">Clear</button>
+            </form>
+        </div>
+        <!-- Customer Details Search Section End -->
+
+        <!-- Customer Details Button Section Start -->
+        <div class="col-lg-5 mt-4">
+            <button class="btn btn-success mt-2 m-1" data-bs-target="#registerCustomer"
+                    data-bs-toggle="modal" id="btnRegister" type="button">+ New Customer
+            </button>
+
+            <button class="btn btn-warning mt-2 m-1" data-bs-target="#updateCustomer"
+                    data-bs-toggle="modal" type="button">Update Customer
+            </button>
+
+            <button class="btn btn-danger mt-2 m-1" data-bs-target="#deleteCustomer"
+                    data-bs-toggle="modal" type="button">Delete Customer
+            </button>
+
+            <button class="btn btn-primary mt-2 m-1" id="btnViewAllCustomer" type="button">View All Customers
+            </button>
+        </div>
+        <!-- Customer Details Button Section End -->
+
+    </div>
+    <!-- Customer Details Section End -->
+
+    <!-- View Customer Details Table Start -->
+    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around" style="height: 250px;">
+        <div class="col-10">
+            <div class="customerTableDiv overflow-auto" style="height: 200px;">
+                <table class="table table-success table-striped table-bordered table-hover">
+                    <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Salary</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customerTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- View Customer Details Table End -->
+</div>
+</main>
+
+<!-- Modal - Add Customer Start-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="registerCustomer" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header" style="background: #16A085">
+            <h5 class="modal-title text-light">Add Customer</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtCustomerId">ID :</label>
+                    <input class="form-control" id="txtCustomerId" type="text">
+                    <span class="control-error" id="lblCusID"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtCustomerName">Name :</label>
+                    <input class="form-control" id="txtCustomerName" type="text">
+                    <span class="control-error" id="lblCusName"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtCustomerAddress">Address :</label>
+                    <input class="form-control" id="txtCustomerAddress" type="text">
+                    <span class="control-error" id="lblCusAddress"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtCustomerSalary">Salary :</label>
+                    <input class="form-control" id="txtCustomerSalary" type="number">
+                    <span class="control-error" id="lblCusSalary"></span>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-warning" id="btnClearC" type="reset">Clear</button>
+            <button class="btn btn-primary" id="btnCSave" type="button">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal Add Customer End -->
+
+<!-- Modal Update Customer Start-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="updateCustomer" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header  bg-warning">
+            <h5 class="modal-title text-dark">Update Customer</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="searchCustomerId">ID :</label>
+                    <input class="form-control" id="searchCustomerId" type="text">
+                    <span class="control-error" id="lblUCusId"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="nameUpdate">Name :</label>
+                    <input class="form-control" id="nameUpdate" type="text">
+                    <span class="control-error" id="lblUCusName"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="addressUpdate">Address :</label>
+                    <input class="form-control" id="addressUpdate" type="text">
+                    <span class="control-error" id="lblUCusAddress"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="salaryUpdate">Salary :</label>
+                    <input class="form-control" id="salaryUpdate" type="number">
+                    <span class="control-error" id="lblUCusSalary"></span>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-warning" id="btnUclearC" type="reset">Clear</button>
+            <button class="btn btn-primary" type="button" id="bntUpdateCustomer">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal Update Customer End -->
+
+<!-- Modal Delete Customer Start-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="deleteCustomer" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header  bg-danger">
+            <h5 class="modal-title text-light">Delete Customer</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="searchCIdDelete">ID :</label>
+                    <input class="form-control" id="searchCIdDelete" type="text">
+                </div>
+                <fieldset disabled>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="disabledNameDelete">Name :</label>
+                        <input class="form-control" id="disabledNameDelete" type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="disabledAddressDelete">Address :</label>
+                        <input class="form-control" id="disabledAddressDelete" type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="disabledSalaryDelete">Salary :</label>
+                        <input class="form-control" id="disabledSalaryDelete" type="number">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-warning" id="btnDclearC" type="reset">Clear</button>
+            <button class="btn btn-danger" type="button" id="btnDeleteCustomer">Delete</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal Delete Customer End-->
+<!--End OF Customers-->
+
+<!--Start OF Items-->
+<main id="ItemsSection" class="row container-fluid">
+   <!-- Item Header Start -->
+   <div class="container d-flex flex-grow-1 flex-column">
+    <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+        <h2 id="H1-1" style="font-family: 'Arial Rounded MT Bold',serif"><i
+                class="fa-sharp fa-solid fa-computer"></i> Item
+        </h2>
+    </div>
+</div>
+<!-- Item Header End -->
+
+<!-- Item Header Section Start -->
+<div class="container d-flex flex-grow-1 flex-column" style="background-color: #cdd4db">
+    <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+        <h6 id="H6-1">Home > Item</h6>
+        <hr>
+    </div>
+    <!-- Item Header Section End -->
+
+    <!-- Item Details Section Start -->
+    <div class="row justify-content-around" style="height: max-content">
+
+        <!-- Item Details Search Section Start -->
+        <div class="col-10 col-md-5 col-lg-4 p-0 mt-2 rounded-3" style="background-color: #cdd4db">
+            <h4 class="text-center p-2 text-light rounded-3" style="background: #2d702d">Search Item</h4>
+
+            <div class="mb-3 ms-3 me-3 ">
+                <input class="form-control me-2" id="ItemIdSearch"
+                       placeholder="Enter Item ID"
+                       type="search">
+            </div>
+            <form>
+                <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3 btn-success" id="btnSearchItem"
+                        type="button">Search
+                </button>
+                <button class="btn btn-warning ms-3 mb-3 ms-md-3 ms-lg-3" id="clearSearchItem" type="button">Clear
+                </button>
+            </form>
+        </div>
+        <!-- Item Details Search Section End -->
+
+        <!-- Item Details Button Section Start -->
+        <div class="col-lg-5 mt-4">
+            <button class="btn btn-success mt-2 m-1" data-bs-target="#registerItem"
+                    data-bs-toggle="modal" id="btnAddItem" type="button">+ New Item
+            </button>
+
+            <button class="btn btn-warning mt-2 m-1" data-bs-target="#updateItem"
+                    data-bs-toggle="modal" type="button">Update Item
+            </button>
+
+            <button class="btn btn-danger mt-2 m-1" data-bs-target="#deleteItem"
+                    data-bs-toggle="modal" type="button">Delete Item
+            </button>
+
+            <button class="btn btn-primary mt-2 m-1" id="btnViewAllItems" type="button">View All Item</button>
+        </div>
+        <!-- Item Details Button Section End -->
+    </div>
+    <!-- Item Details Section End -->
+
+    <!-- View Item Details Table Start -->
+    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around" style="height: 250px;">
+        <div class="col-10">
+            <div class="ItemTableDiv overflow-auto" style="height: 200px;">
+                <table class="table table-success table-striped table-bordered table-hover">
+                    <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                    <tr>
+                        <th>Item Code</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="ItemTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- View Item Details Table End -->
+</div>
+</main>
+
+<!-- Modal - Add Item Start-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="registerItem" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header" style="background: #16A085">
+            <h5 class="modal-title text-light">Add Item</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtItemsId">Item Code :</label>
+                    <input class="form-control" id="txtItemsId" type="text">
+                    <span class="control-error" id="lblItemId"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtItemName">Item Name :</label>
+                    <input class="form-control" id="txtItemName" type="text">
+                    <span class="control-error" id="lblItemName"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtItemQty">Quantity :</label>
+                    <input class="form-control" id="txtItemQty" type="text">
+                    <span class="control-error" id="lblItemQty"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="txtItemPrice">Price :</label>
+                    <input class="form-control" id="txtItemPrice" type="number">
+                    <span class="control-error" id="lblItemPrice"></span>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-warning" id="btnClearI" type="reset">Clear</button>
+            <button class="btn btn-primary" id="btnISave" type="button">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal - Add Item End-->
+
+<!-- Modal Update Item Start-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="updateItem" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header  bg-warning">
+            <h5 class="modal-title text-dark">Update Item</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="searchItemId">Item Code :</label>
+                    <input class="form-control" id="searchItemId" type="text">
+                    <span class="control-error" id="lblUItemId"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="updateItemName">Item Name :</label>
+                    <input class="form-control" id="updateItemName" type="text">
+                    <span class="control-error" id="lblUItemName"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="updateItemQty">Quantity :</label>
+                    <input class="form-control" id="updateItemQty" type="text">
+                     <span class="control-error" id="lblUItemQty"></span>
+                </div>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="updateItemPrice">Price :</label>
+                    <input class="form-control" id="updateItemPrice" type="number">
+                    <span class="control-error" id="lblUItemPrice"></span>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-warning" id="btnUclearI" type="reset">Clear</button>
+            <button class="btn btn-primary" id="btnUpdateItem" type="button">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal Update Item End-->
+
+<!-- Modal Delete Item Start -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="deleteItem" tabindex="-1">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header  bg-danger">
+            <h5 class="modal-title text-light">Delete Item</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="ms-3 me-3">
+                    <label class="form-label fw-bold mb-0" for="searchDItemId">Item Code :</label>
+                    <input class="form-control" id="searchDItemId"
+                           type="text">
+                </div>
+                <fieldset disabled>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="DItemName">Item Name :</label>
+                        <input class="form-control disabled" id="DItemName"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="DItemQty">Quantity :</label>
+                        <input class="form-control disabled" id="DItemQty"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="DItemPrice">Price :</label>
+                        <input class="form-control disabled" id="DItemPrice" type="number">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button class="btn btn-warning" id="btnDclearI" type="reset">Clear</button>
+            <button class="btn btn-danger" type="button">Delete</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal Delete Item End -->
+<!--End OF Items-->
+
+<!--Start OF Order-->
+<main id="OrderSection" class="row container-fluid">
+    <!-- Order Header Start -->
+    <div class="container d-flex flex-grow-1 flex-column">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h2 id="H1-1" style="font-family: 'Arial Rounded MT Bold',serif"><i
+                    class="fa-sharp fa-solid fa-cart-plus"></i> Place Order
+            </h2>
+        </div>
+    </div>
+    <!-- Order Header End -->
+
+    <!-- Order Header Section Start -->
+    <div class="container d-flex flex-grow-1 flex-column" style="background-color: #cdd4db">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h6 id="H6-1">Home > Place Order</h6>
+            <hr>
+        </div>
+        <!-- Order Header Section End -->
+
+        <!-- Order Details Section Start -->
+        <div class="row justify-content-around" style="height: min-content">
+
+            <!-- Order Invoice Details Section Start -->
+            <div class="col-10 col-md-5 col-lg-4 p-3 mt-3 rounded-3" style="background-color: #cdd4db">
+                <h5 class="text-center p-2 text-light rounded-3" style="background: #2d702d">Invoice Details</h5>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="orderId">Order ID :</label>
+                        <input class="form-control border-dark" id="orderId" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="orderDate">Order Date :</label>
+                        <input class="form-control border-dark" id="orderDate" type="date">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="customerId">Customer ID :</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="customerId">
+                            <option selected>-Select Customer-</option>
+                            <option value="1">C001</option>
+                            <option value="2">C002</option>
+                            <option value="3">C003</option>
+                            <option value="4">C004</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="customerName">Name :</label>
+                        <input class="form-control border-dark" disabled id="customerName" type="text">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="customerAddress">Address :</label>
+                        <input class="form-control border-dark" disabled id="customerAddress" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="customerSalary">Salary :</label>
+                        <input class="form-control border-dark" disabled id="customerSalary" type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- Order Invoice Details Section End -->
+
+            <!-- Order Item Details Section Start -->
+            <div class="col-10 col-md-5 col-lg-4 p-3 mt-3 rounded-3" style="background-color: #cdd4db">
+                <h5 class="text-center p-2 text-light rounded-3" style="background: #2d702d">Item Details</h5>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="itemcode">Item Code :</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="itemcode">
+                            <option selected>-Select Item-</option>
+                            <option value="1">I001</option>
+                            <option value="2">I002</option>
+                            <option value="3">I003</option>
+                            <option value="4">I004</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="itemName">Item Name :</label>
+                        <input class="form-control border-dark" disabled id="itemName" type="text">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="itemPrice">Unit Price :</label>
+                        <input class="form-control border-dark" disabled id="itemPrice" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="qtyOnHand">Qty On Hand :</label>
+                        <input class="form-control border-dark" disabled id="qtyOnHand" type="text">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="buyQty">Buy Qty :</label>
+                        <input class="form-control border-dark" id="buyQty" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mt-4 ">
+                        <button class="btn btn-primary rounded-2" type="submit">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Item Details Section End -->
+
+            <!-- Order Details Section Start -->
+            <div class="col-10 col-md-5 col-lg-3 p-3 mt-3 rounded-3" style="background-color: #cdd4db">
+                <h5 class="text-center bg-secondary p-2 text-light rounded-3">Payment Details</h5>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="total">Total :</label>
+                        <input class="form-control border-dark" disabled id="total" type="number">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="discount">Discount :</label>
+                        <input class="form-control border-dark" id="discount" role="spinbutton" type="number">
+                    </div>
+                </div>
+
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="subTotal">Sub Total :</label>
+                        <input class="form-control border-dark" disabled id="subTotal" type="number">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="cash">Cash :</label>
+                        <input class="form-control border-dark" id="cash" type="text">
+                    </div>
+                </div>
+
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="balance">Balance :</label>
+                        <input class="form-control border-dark" disabled id="balance" type="number">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mt-4">
+                        <button class="btn btn-success rounded-2" type="submit">Purchase</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Details Section End -->
+
+            <!--clear All Button Section Start-->
+            <div class="d-grid col-12 col-md-2 mt-4">
+                <button class="btn btn-danger rounded-2 bold" type="reset">Clear All</button>
+            </div>
+            <!--clear All Button Section end-->
+
+            <!-- View Cart Details Table Start -->
+            <div class="row mt-1 mt-md-2 mt-lg-3 justify-content-around" style="height: 160px;">
+                <div class="col-10">
+                    <div class="PlaceOrderTableDiv overflow-auto" style="height: 150px;">
+                        <table class="table table-success table-striped table-bordered table-hover">
+                            <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                            <tr>
+                                <th>Item Code</th>
+                                <th>Item Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody id="PlaceOrderTable">
+                            <!-- <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- View Cart Details Table End -->
+
+        </div>
+        <!-- Order Details Section End -->
+    </div>
+</main>  
+<!--End OF Order-->
+<script src="assets/styles/bootstrap-5.2.1-dist/js/bootstrap.bundle.js"></script>
+<script src="assets/styles/jQuery/jquery-3.6.1.min.js"></script>
+
+<!--display function-->
+<script>
+  $('#navCustomer').css('display','none');
+  $('#navItem').css('display','none');
+  $('#navOrder').css('display','none');
+
+  $('#CustomerSection').css('display','none');
+  $('#ItemsSection').css('display','none');
+  $('#OrderSection').css('display','none');
+
+  $('#btnCustomerViewMore').click(function (){
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','');
+    $('#navItem').css('display','none');
+    $('#navOrder').css('display','none');
+
+    $('#CustomerSection').css('display','');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#OrderSection').css('display','none');
+
+  });
+
+  $('#btnItemsViewMore').click(function (){
+    $('#navItem').css('display','block');
+    $('#navOrder').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','');
+    $('#OrderSection').css('display','none');
+
+  });
+  $('#btnOrderViewMore').click(function (){
+
+    $('#navOrder').css('display','block');
+    $('#navItem').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#OrderSection').css('display','');
+
+  });
+
+  $('.Home').click(function (){
+    $('#navHome').css('display','block');
+    $('#navCustomer').css('display','none');
+    $('#navItem').css('display','none');
+    $('#navOrder').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','');
+    $('#ItemsSection').css('display','none');
+    $('#OrderSection').css('display','none');
+
+
+  });
+
+  $('.Customers').click(function (){
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','block');
+    $('#navItem').css('display','none');
+    $('#navOrder').css('display','none');
+
+    $('#CustomerSection').css('display','');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#OrderSection').css('display','none');
+
+
+  });
+
+  $('.Items').click(function (){
+    $('#navItem').css('display','block');
+    $('#navOrder').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','');
+    $('#OrderSection').css('display','none');
+
+  });
+  $('.Order').click(function (){
+
+    $('#navOrder').css('display','block');
+    $('#navItem').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#OrderSection').css('display','');
+
+  });
+
+</script>
 </body>
 </html>
