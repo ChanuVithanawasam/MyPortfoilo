@@ -26,13 +26,41 @@
 
         #container {
             display: flex;
-            height: 460px;
+            height: 150px;
         }
 
         #container > div {
             width: 100%;
             height: 70px;
             border: 1px solid black;
+        }
+        .speedAndWaiting h2{
+            color: red;
+            font-size: 30px;
+            text-align: center;
+        }
+        #speedValue{
+            color: blue;
+            font-size: 30px;
+            text-align: center;
+            
+        }
+
+        #waitingTime{
+            color: blue;
+            font-size: 30px;
+            text-align: center;
+            
+        }
+        .slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .slider-container {
+            width: 10%;
         }
 
     </style>
@@ -56,10 +84,23 @@
             <div></div>
         </section>
     </section>
+    <section class="speedAndWaiting">
+        <h2>Speed : <span id="speedValue"> </span></h2>
+        <h2>Waiting Time : <span id="waitingTime"> </span></h2>
+    </section>
+
+    <section class="slider">
+        <div class="slider-container">
+            <input type="range" id="speedSlider" min="1" max="100" value="50">
+        </div>
+    </section>
+    
+    
     <section class="row justify-content-center mt-5">
         <div class="col-3 d-flex justify-content-around">
             <button class="btn btn-primary pl-5 pr-5" id="btnStart">Start</button>
             <button class="btn btn-danger pl-5 pr-5" id="btnStop">Stop</button>
+            
         </div>
     </section>
 </section>
@@ -86,6 +127,7 @@
     }
 
     var count = 0;
+    var waitingTime = 0;
 
     function animate() {
         count++;
@@ -95,12 +137,14 @@
         } else {
             if (count >= (leftColors.length * 2)) {
                 count = 0;
+                waitingTime = 0;
             }
             initArray = rightColors;
             animateRight();
         }
+        $("#waitingTime").text(` ${waitingTime}`);
+        waitingTime += 2000 / animationSpeed; // Increase waiting time based on animation speed
     }
-
 
     function renderKnightRider() {
         $("#container").empty();
@@ -110,19 +154,32 @@
         animate();
     }
 
-    var id=0;
+    var id = 0;
+    var animationSpeed = 50; // Default speed (you can change this)
 
-    $("#btnStart").click(function (){
-        clearInterval(id);
-        id=setInterval(renderKnightRider, 100);
-        console.log("ID when Start btn Called",id);
-        audio1.play();
+    // Function to update the speed value in the UI
+    function updateSpeedValue() {
+        $("#speedValue").text(` ${animationSpeed}`);
+        clearInterval(id); // Stop the animation
+        id = setInterval(renderKnightRider, 2000 / animationSpeed); // Restart the animation with the new speed
+    }
 
+    $("#speedSlider").on("input", function () {
+        animationSpeed = parseInt($(this).val());
+        updateSpeedValue(); 
     });
-4
-    $("#btnStop").click(function (){
+
+    $("#btnStart").click(function () {
         clearInterval(id);
-        console.log("ID when End Btn Called",id);
+        id = setInterval(renderKnightRider, 2000 / animationSpeed); 
+        console.log("ID when Start btn Called", id);
+        audio1.play();
+        updateSpeedValue();
+    });
+
+    $("#btnStop").click(function () {
+        clearInterval(id);
+        console.log("ID when End Btn Called", id);
         audio1.pause();
     });
 </script>
