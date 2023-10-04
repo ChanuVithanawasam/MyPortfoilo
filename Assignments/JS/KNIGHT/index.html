@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight Rider</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            background-image: url("assets/Related\ Pictures\ knight\ rider\ kitt\ wallpaper.jpg");
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: white;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 10px;
+            width: max-content;
+            border-bottom: 3px solid white;
+            padding-bottom: 9px;
+        }
+
+        #container {
+            display: flex;
+            height: 460px;
+        }
+
+        #container > div {
+            width: 100%;
+            height: 70px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Knight-Rider</h1>
+
+<section class="container-fluid">
+    <section class="row mt-5">
+        <div class="col-12">
+        </div>
+    </section>
+    <section class="row mt-5">
+        <section class="col-12" id="container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+    <section class="row justify-content-center mt-5">
+        <div class="col-3 d-flex justify-content-around">
+            <button class="btn btn-primary pl-5 pr-5" id="btnStart">Start</button>
+            <button class="btn btn-danger pl-5 pr-5" id="btnStop">Stop</button>
+        </div>
+    </section>
+</section>
+
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    let audio1 = new Audio();
+    audio1.src = "assets/Knight_Rider_-_Theme_(1982)_Synth+Guitar_Cover(128k).mp3";
+
+    var initArray = [];
+    var leftColors = ['white', 'white', 'white', 'white', 'white', 'white', '#d3c5c5', '#be7474', '#cd4a4a', '#b83030', '#c52525', '#dc1e1e'];
+    var rightColors = ['white', 'white', 'white', 'white', 'white', 'white', '#dc1e1e', '#c52525', '#b83030', '#cd4a4a', '#be7474', '#d3c5c5'];
+
+    function animateRight() {
+        let firstValue = initArray.shift();
+        initArray.push(firstValue);
+    }
+
+    function animateLeft() {
+        let lastColor = initArray.pop();
+        initArray.unshift(lastColor);
+    }
+
+    var count = 0;
+
+    function animate() {
+        count++;
+        if (count <= leftColors.length) {
+            initArray = leftColors;
+            animateLeft();
+        } else {
+            if (count >= (leftColors.length * 2)) {
+                count = 0;
+            }
+            initArray = rightColors;
+            animateRight();
+        }
+    }
+
+
+    function renderKnightRider() {
+        $("#container").empty();
+        for (let i = 0; i < (initArray.length) / 2; i++) {
+            $("#container").append(`<div style="background-color: ${initArray[i]}"></div>`)
+        }
+        animate();
+    }
+
+    var id=0;
+
+    $("#btnStart").click(function (){
+        clearInterval(id);
+        id=setInterval(renderKnightRider, 100);
+        console.log("ID when Start btn Called",id);
+        audio1.play();
+
+    });
+4
+    $("#btnStop").click(function (){
+        clearInterval(id);
+        console.log("ID when End Btn Called",id);
+        audio1.pause();
+    });
+</script>
+
+</body>
+</html>
