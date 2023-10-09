@@ -143,7 +143,7 @@
             animateRight();
         }
         $("#waitingTime").text(` ${waitingTime}`);
-        waitingTime += 2000 / animationSpeed; // Increase waiting time based on animation speed
+        waitingTime += 2000 / animationSpeed;
     }
 
     function renderKnightRider() {
@@ -155,13 +155,12 @@
     }
 
     var id = 0;
-    var animationSpeed = 50; // Default speed (you can change this)
+    var animationSpeed = 50;
 
-    // Function to update the speed value in the UI
     function updateSpeedValue() {
         $("#speedValue").text(` ${animationSpeed}`);
-        clearInterval(id); // Stop the animation
-        id = setInterval(renderKnightRider, 2000 / animationSpeed); // Restart the animation with the new speed
+        clearInterval(id); 
+        id = setInterval(renderKnightRider, 2000 / animationSpeed);
     }
 
     $("#speedSlider").on("input", function () {
