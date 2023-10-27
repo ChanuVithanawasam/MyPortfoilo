@@ -286,7 +286,7 @@ function pushOrderDetails() {
 
         let orderDetailArrayList = new orderDetail(orderId, cusId, itemId, qty, total);
 
-        orderDetails.push(orderDetailArrayList);
+        OrderDetails.push(orderDetailArrayList);
         console.log(orderDetailArrayList);
     }
 }

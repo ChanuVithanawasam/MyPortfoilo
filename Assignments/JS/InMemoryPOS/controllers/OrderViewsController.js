@@ -13,7 +13,7 @@ function loadAllOrderDetails() {
 
     $("#tblOrderDetails").empty();
 
-    for (var orderDetail of orderDetails) {
+    for (var orderDetail of OrderDetails) {
         console.log(orderDetail);
         var row = `<tr><td>${orderDetail.orderId}</td><td>${orderDetail.cusId}</td><td>${orderDetail.itemId}</td><td>${orderDetail.qty}</td><td>${orderDetail.total}</td></tr>`;
         $("#tblOrderDetails").append(row);
