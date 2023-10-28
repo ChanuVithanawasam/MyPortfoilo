@@ -1,7 +1,7 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    cursor: none;
+    /* cursor: none; */
 }
 ::-webkit-scrollbar {
     width: 7px;
